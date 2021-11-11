@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./styles/loader.css">
     <link rel="stylesheet" href="./styles/index.css">
     <title>Broken page</title>
@@ -22,18 +22,18 @@
             <div></div>
         </div>
         <button class="action fetch" data-page="2">Загрузить картинки</button>
-        <section class="images content"></section>
+        <section class="images content" aria-labelledby="pictures">
+            <h1 class="visually-hidden" id="pictures">Pictures about my life</h1>
+        </section>
     </main>
     <div class="popup">
-        <button class="action close">&Cross;</button>
+        <button class="action close">&times;</button>
         <div class="content"></div>
     </div>
 
-    <script src="./scripts/index.js"></script>
-
     <template id="image">
         <a class="link" href="" data-id="">
-            <img src="" widht="250" alt=""></img>
+            <img src="" widht="250" alt="">
         </a>
     </template>
 
@@ -48,6 +48,8 @@
             <a class="link open" href="" target="_blank">Открыть в полном размере</a>
         </div>
     </template>
+
+    <script src="./scripts/index.js"></script>
 </body>
 
 </html>
